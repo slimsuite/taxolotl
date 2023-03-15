@@ -1,7 +1,7 @@
 # Taxolotl: Taxolotl genome assembly taxonomy summary and assessment tool
 
 ```
-Taxolotl v0.1.1
+Taxolotl v0.1.3
 ```
 
 For a better rendering and navigation of this document, please download and open [`./docs/taxolotl.docs.html`](./docs/taxolotl.docs.html), or visit <https://slimsuite.github.io/taxolotl/>.
@@ -21,7 +21,12 @@ Taxolotl is available as part of SLiMSuite, or via a standalone GitHub repo at
 
 ## Citing Taxolotl
 
-Taxolotl is currently unpublished. Please cite the GitHub page.
+Taxolotl is currently unpublished. Please cite the GitHub page and this bioRxiv paper, which has an example of
+Taxolotl in action:
+
+* Tobias PA, Edwards RJ, Surana P, Mangelson H, Inácio V, do Céu Silva M, Várzea V, Park RF & Batista D.
+"A chromosome-level genome resource for studying virulence mechanisms and evolution of the coffee rust pathogen
+_Hemileia vastatrix_. bioRxiv 2022.07.29.502101 doi: [10.1101/2022.07.29.502101](https://doi.org/10.1101/2022.07.29.502101)
 
 ---
 
@@ -159,7 +164,7 @@ In addition, Taxolotl will output:
 * `*.taxbyseq.tsv` = Rating counts for each taxonomic group by assembly sequence (scaffold).
 * `*.taxolotl_report.tsv` = Collated Kraken-style report file.
 * `*.lca_genes.tsv` = Best assignments (lowest taxonomic level) for each gene.
-* `*.lca_genes.gff` = GFF file with Taxolotly ratings for each gene.
+* `*.lca_genes.gff` = GFF file with Taxolotl ratings for each gene.
 * `*.taxolotl.tsv` = Tab separated file with consensus taxonomic assignment at each taxonomic rank, and ratings per sequence.
 * `*.$SUBSET.id` = Sequence identifiers for assembly subsets based on Taxolotl ratings.
 * `*.$SUBSET.fasta` = Fasta files of assembly subsets based on Taxolotl ratings.

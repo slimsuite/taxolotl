@@ -1,12 +1,12 @@
 export RSTUDIO_PANDOC=/Applications/RStudio.app/Contents/MacOS/pandoc
 
-python ../code/taxolotl.py dochtml newlog
+python3 ../code/taxolotl.py dochtml newlog
 
-python ../code/taxolotl.py --description | sed 's/^/# /' > ../Taxolotl.md
+python3 ../code/taxolotl.py --description | sed 's/^/# /' > ../Taxolotl.md
 echo >> ../Taxolotl.md
 
 echo '```' >> ../Taxolotl.md
-python ../code/taxolotl.py --details >> ../Taxolotl.md
+python3 ../code/taxolotl.py --details >> ../Taxolotl.md
 echo '```' >> ../Taxolotl.md
 echo >> ../Taxolotl.md
 echo 'For a better rendering and navigation of this document, please download and open [`./docs/taxolotl.docs.html`](./docs/taxolotl.docs.html), or visit <https://slimsuite.github.io/taxolotl/>.' >> ../Taxolotl.md

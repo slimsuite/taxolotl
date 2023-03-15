@@ -19,8 +19,9 @@
 """
 Module:       taxolotl
 Description:  Taxolotl genome assembly taxonomy summary and assessment tool
-Version:      0.1.1
-Last Edit:    25/11/21
+Version:      0.1.3
+Last Edit:    15/03/23
+Citation:     Tobias PA, Edwards RJ, et al. (preprint) bioRxiv 2022.07.29.502101 doi: 10.1101/2022.07.29.502101
 Copyright (C) 2021  Richard J. Edwards - See source code for GNU License Notice
 
 Function:
@@ -86,6 +87,8 @@ def history():  ### Program History - only a method for PythonWin collapsing! ##
     # 0.0.0 - Initial Compilation.
     # 0.1.0 - Added tabreport function.
     # 0.1.1 - Fix bug with contig output. Added seqname, start and end to contig summary.
+    # 0.1.2 - Added input file checking.
+    # 0.1.3 - Updated citation data.
     '''
 #########################################################################################################################
 def todo():     ### Major Functionality to Add - only a method for PythonWin collapsing! ###
@@ -104,7 +107,7 @@ def todo():     ### Major Functionality to Add - only a method for PythonWin col
 #########################################################################################################################
 def makeInfo(): ### Makes Info object which stores program details, mainly for initial print to screen.
     '''Makes Info object which stores program details, mainly for initial print to screen.'''
-    (program, version, last_edit, copy_right) = ('Taxolotl', '0.1.1', 'November 2021', '2021')
+    (program, version, last_edit, copy_right) = ('Taxolotl', '0.1.3', 'March 2023', '2021')
     description = 'Taxolotl genome assembly taxonomy summary and assessment tool'
     author = 'Dr Richard J. Edwards.'
     comments = ['This program is still in development and has not been published.',rje_obj.zen()]
@@ -294,7 +297,12 @@ class Taxolotl(saaga.SAAGA, rje_kat.KAT):
 
         ## Citing Taxolotl
 
-        Taxolotl is currently unpublished. Please cite the GitHub page.
+        Taxolotl is currently unpublished. Please cite the GitHub page and this bioRxiv paper, which has an example of
+        Taxolotl in action:
+
+        * Tobias PA, Edwards RJ, Surana P, Mangelson H, Inácio V, do Céu Silva M, Várzea V, Park RF & Batista D.
+        "A chromosome-level genome resource for studying virulence mechanisms and evolution of the coffee rust pathogen
+        _Hemileia vastatrix_. bioRxiv 2022.07.29.502101 doi: [10.1101/2022.07.29.502101](https://doi.org/10.1101/2022.07.29.502101)
 
         ---
 
@@ -432,7 +440,7 @@ class Taxolotl(saaga.SAAGA, rje_kat.KAT):
         * `*.taxbyseq.tsv` = Rating counts for each taxonomic group by assembly sequence (scaffold).
         * `*.taxolotl_report.tsv` = Collated Kraken-style report file.
         * `*.lca_genes.tsv` = Best assignments (lowest taxonomic level) for each gene.
-        * `*.lca_genes.gff` = GFF file with Taxolotly ratings for each gene.
+        * `*.lca_genes.gff` = GFF file with Taxolotl ratings for each gene.
         * `*.taxolotl.tsv` = Tab separated file with consensus taxonomic assignment at each taxonomic rank, and ratings per sequence.
         * `*.$SUBSET.id` = Sequence identifiers for assembly subsets based on Taxolotl ratings.
         * `*.$SUBSET.fasta` = Fasta files of assembly subsets based on Taxolotl ratings.
